@@ -20,7 +20,7 @@ console.log(loading);
 
     )
   }
-  return <section  className='mb-20'>
+  return <section id='houses' className='mb-20'>
 
     <div className='container mx-auto '>
 

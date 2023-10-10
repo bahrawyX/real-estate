@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { housesData } from '../data';
 import { useParams} from 'react-router-dom';
 import {BiBed,BiArea,BiBath} from  'react-icons/bi' ;
 import{Link} from 'react-router-dom' ;
+import { HouseContext } from '../components/HouseContext';
 
 const PropertyDetails = () => {
   const {Id} = useParams() ;
   console.log(Id);
   const house = housesData.find((house)=>house.id === parseInt(Id)) ;
   console.log(house);
+  const {houses,loading} = useContext(HouseContext) ;
+
   return <div className='container mx-auto min-h-[800px] mb-14'>
             <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between'>
                 <div>
@@ -45,7 +48,7 @@ const PropertyDetails = () => {
                       <div>{house.description}</div>
 
               </div>
-              <div className=' flex-1 w-full mb-8 border border-gray-600 rounded-lg rounded-tl-[90px]  px-4 py-5'>
+              <div className=' flex-1 w-full mb-8 border border-gray-600  rounded-tl-[90px]  px-4 py-5'>
                   <div className='flex items-center gap-x-4 mb-8'>
                     <div className='border border-gray-500 rounded-full p-1'> 
                       <img src={house.agent.image} alt="" />
@@ -63,10 +66,10 @@ const PropertyDetails = () => {
                     <input type="text"  placeholder='Phone*' className='  mb-2 border border-gray-500 outline-none  hover:border-violet-700 focus:border-violet-700 w-full  px-4 h-14 text-sm' />
                     <textarea className='p-4 h-36 text-sm text-gray-500 border border-gray-500  outline-none hover:border-violet-700 focus:border-violet-700 w-full resize-none 'placeholder='Message*' ></textarea>
                     <div className='flex gap-x-2 mt-4'>
-                      <button className='bg-violet-700 hover:bg-violet-800 text-white p-4 text-sm  w-full transition '>
+                      <button className=  ' hover:shadow-xl  bg-violet-700 hover:bg-violet-800 text-white p-4 text-sm  w-full transition '>
                         Send Message
                       </button>
-                      <button className='border p-4  border-violet-800   text-violet-800 w-full transition hover:text-violet-500 hover:border-violet-500 text-sm'>
+                      <button className=' hover:shadow-xl border p-4  border-violet-800   text-violet-800 w-full transition hover:text-violet-500 hover:border-violet-500 text-sm'>
                         Call
                       </button>
                     </div>

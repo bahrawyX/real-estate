@@ -11,11 +11,10 @@ const Banner = () => {
             <span className='text-violet-700'>Rent</span> Your Dream House With Us
           </h1>
           <p  className='max-w-[480px] mb-8'>
-            Lorem ipsum dolor sit, Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, eos.te explicabo quidem neque quae. Magnam repudiandae necessitatibus quas assumenda?
-          </p>
+          Welcome to <span className='text-violet-700 font-semibold'>Homeland</span>, where your dream rental property awaits! Explore a diverse range of options tailored to your lifestyle. Let us help you find the perfect home today. </p>
         </div>
-        <div className='hidden flex-1 lg:flex justify-end items-end '>
-          <img src="../assests/img/house-banner.png" alt="" />
+        <div className='hidden flex-1  lg:flex justify-end items-end '>
+          <img className='rounded-br-[130px]' src="../assests/img/house-banner.png" alt="" />
         </div>
       </div>
       <Search />

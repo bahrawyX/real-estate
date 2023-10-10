@@ -14,10 +14,10 @@ const SignIn = () => {
                     <input type="text"  placeholder='Email*' className='  mb-2 border border-gray-500 outline-none  hover:border-violet-700 focus:border-violet-700 w-full  px-4 h-14 text-sm' />
                     <input type="pass"  placeholder='Password*' className='  mb-2 border border-gray-500 outline-none  hover:border-violet-700 focus:border-violet-700 w-full  px-4 h-14 text-sm' />
                 <div className='flex gap-x-2 mt-4'>
-                      <button className='bg-violet-700 hover:bg-violet-800 text-white p-4 text-sm  w-full transition '>
+                      <button className='  hover:shadow-xl   bg-violet-700 hover:bg-violet-800 text-white p-4 text-sm  w-full transition '>
                         Sign In
                       </button>
-                      <button className='border p-4  border-violet-800   text-violet-800 w-full transition hover:text-violet-500 hover:border-violet-500 text-sm'>
+                      <button className=' hover:shadow-xl border p-4  border-violet-800   text-violet-800 w-full transition hover:text-violet-500 hover:border-violet-500 text-sm'>
                         <Link to='/signup'  >Sign Up ?</Link>
                       </button>
                     </div>
